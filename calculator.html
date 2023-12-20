@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="calculator">
+      <input type="text" id="display"> 
+      <div class="button-container">
+          <button class="button"
+          onclick="
+          currentDisplay='';
+          change(currentDisplay);">C</button>
+
+          <button class="button" onclick="
+         currentDisplay= currentDisplay+ '1';
+         change(currentDisplay);">1</button>
+
+          <button class="button" onclick="
+          currentDisplay=currentDisplay+'2';
+          change(currentDisplay);">2</button>
+
+          <button class="button" onclick="
+          currentDisplay=currentDisplay+ '+'
+          change(currentDisplay);">+</button>
+
+          <button class="button" onclick="
+          currentDisplay=currentDisplay +'3';
+          change(currentDisplay);">3</button>
+
+          <button class="button" onclick="
+          currentDisplay =currentDisplay+'4';
+          change(currentDisplay);">4</button>
+
+          <button class="button"  onclick="
+          currentDisplay =currentDisplay+'-';
+          change(currentDisplay);" >-</button>
+
+          <button class="button"  onclick="
+          currentDisplay =currentDisplay+'5';
+          change(currentDisplay);">5</button>
+
+          <button class="button"  onclick="
+          currentDisplay =currentDisplay+'6';
+          change(currentDisplay);">6</button>
+
+          <button class="button" onclick="
+          currentDisplay =currentDisplay+ '*';
+          change(currentDisplay);
+          ">*</button>
+          <button class="button" onclick="
+          currentDisplay =currentDisplay + '7';
+          change(currentDisplay);">7</button>
+
+          <button class="button" onclick="
+          currentDisplay =currentDisplay +'8';
+          change(currentDisplay);">8</button>
+          <button class="button" onclick="
+          currentDisplay = currentDisplay + '/'
+          change(currentDisplay)">/</button>
+
+          <button class="button" onclick="
+          let result=eval(currentDisplay);
+          currentDisplay=result;
+          change(currentDisplay);">=</button>
+
+          <button class="button" onclick="
+          currentDisplay =currentDisplay+'9';
+          change(currentDisplay);">9</button>
+
+          <button class="button"  onclick="
+          currentDisplay =currentDisplay+'0';
+          change(currentDisplay);">0</button>
+
+          <button class="button"  onclick="
+          currentDisplay = currentDisplay+'.';
+          change(currentDisplay);">.</button>
+
+      </div>
+    </div>
+    <script>
+      let currentDisplay='';
+      function change(currentDisplay){
+        document.querySelector('#display').value =currentDisplay;
+      }
+    </script>
+</body>
+</html>
